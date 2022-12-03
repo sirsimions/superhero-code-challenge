@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :powers, only: [:index, :show, :update]
   resources :heros, only: [:index, :show]
 
-  # get '/heroes', to: 'heroes#index'
+  #get '/heroes', to: 'heroes#index'
   # get '/heroes/:id', to: 'heroes#show'
   # get '/powers', to: 'powers#index'
   # update '/powers/:id', to: 'powers#update'

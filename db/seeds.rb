@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-puts 'Rosy is seeding'
+puts 'seeding'
 
 
 hero1 = Hero.create(name: "Sam", super_name: "Avator")
