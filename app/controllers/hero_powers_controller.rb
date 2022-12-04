@@ -1,4 +1,6 @@
 class HeroPowersController < ApplicationController
+    protect_from_forgery with: :null_session #prevents cross-site request forgery (CSRF) attacks bug
+
     def create
         hero_power = HeroPower.create!(hero_power_params)
         hero= Hero.find(params[:hero_id])
