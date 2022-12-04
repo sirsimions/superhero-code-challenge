@@ -1,5 +1,5 @@
 class HerosController < ApplicationController
-    
+    protect_from_forgery with: :null_session #prevents cross-site request forgery (CSRF) attacks bug
 
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
