@@ -5,12 +5,12 @@ class PowersController < ApplicationController
     #GET/powers
     def index
         powers = Power.all
-        render json: powers
+        render json: powers, only: [:id, :name, :description]
     end
     #GET/powers/id
     def show
         power = Power.find(params[:id])
-        render json: power
+        render json: power, only: [:id, :name, :description]
     end
     #PATCH/powers/id
     def update
