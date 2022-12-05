@@ -10,7 +10,7 @@ class HerosController < ApplicationController
 
     def show
         hero = Hero.find(params[:id])
-        render json: hero, only:[:id, :name,:super_name], include: :powers
+        render json: hero.to_json(only:[:id, :name,:super_name], include: [powers: { only: [:id, :name, :description]}])
     end
 
     private 
